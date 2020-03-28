@@ -3,3 +3,4 @@
  */
 
 export * from './lib/micro-user-header.module';
+export * from './lib/micro-user-header.component';

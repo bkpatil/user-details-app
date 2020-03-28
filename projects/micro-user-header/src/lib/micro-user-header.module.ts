@@ -10,3 +10,4 @@ import { MicroUserHeaderComponent } from './micro-user-header.component';
   exports: [MicroUserHeaderComponent,NgbModule]
 })
 export class MicroUserHeaderModule { }
+ 

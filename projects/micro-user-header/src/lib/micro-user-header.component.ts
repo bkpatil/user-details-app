@@ -12,4 +12,4 @@ export class MicroUserHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-}
+}        
