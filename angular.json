@@ -27,9 +27,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [],
+            "scripts": [
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -128,6 +130,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "micro-user-header": {
+      "root": "projects/micro-user-header",
+      "sourceRoot": "projects/micro-user-header/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/micro-user-header/tsconfig.lib.json",
+            "project": "projects/micro-user-header/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/micro-user-header/src/test.ts",
+            "tsConfig": "projects/micro-user-header/tsconfig.spec.json",
+            "karmaConfig": "projects/micro-user-header/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/micro-user-header/tsconfig.lib.json",
+              "projects/micro-user-header/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]

@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "micro-user-header": [
+        "dist/micro-user-header"
+      ],
+      "micro-user-header/*": [
+        "dist/micro-user-header/*"
+      ]
+    }
   }
 }
